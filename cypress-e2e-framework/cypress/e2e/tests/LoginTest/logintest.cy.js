@@ -1,4 +1,4 @@
-import Login from "../pages/login"
+import Login from '../../pages/login.js';
 
 /// <reference types="cypress" />
 
@@ -8,7 +8,7 @@ describe('Login example', () => {
     })
   
     // Los "it" son los escenarios 
-    it('Login valid', () => {
+    it.only('Login valid', () => {
         const login = new Login();
 
         // Click en "Ingresar a Mi Autogestion"
@@ -21,14 +21,15 @@ describe('Login example', () => {
         login.getDomainsSelect().select('sistemas');
 
         // Se ingresa contraseña
-        login.getPasswordInput().type("merlo41002305**");
+        //! Sera invalido ya que no es mi contraseña
+        login.getPasswordInput().type("**********");
 
         // Clicl en boton iniciar sesion
         login.getLoginButton().click();
     })
 
     it('Login invalid', () => {
-      const login = new Login();
+      const login = new Login()
 
       // Click en "Ingresar a Mi Autogestion"
       login.getIngresarBtn().click();
