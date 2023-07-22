@@ -9,6 +9,11 @@ describe('Login example', () => {
   
     // Los "it" son los escenarios 
     it.only('Login valid', () => {
+
+      /**
+       * Este caso de prueba no tendra el resultado correcto dado
+       * que no quiero dejar mi contraseña en un repositorio publico
+       */
         const login = new Login();
 
         // Click en "Ingresar a Mi Autogestion"
